@@ -454,6 +454,7 @@ interview
     padding: 0 1rem;
     vertical-align: top;
     box-sizing: border-box;
+    float: left;
 }
 
 .list_inner{

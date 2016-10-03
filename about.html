@@ -3,21 +3,19 @@
 	<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8 eq-ie7" lang="ja"> <![endif]-->
 	<!--[if IE 8]> <html class="no-js lt-ie9 eq-ie8" lang="ja"> <![endif]-->
 	<!--[if gt IE 8]><!--> <html class="no-js" lang="ja"> <!--<![endif]-->
-
-
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<title>社員インタビュー01 | プレミアムプラン</title>
-	<meta name="description" content="今日存在しない、新しい明日を創る。任される文化が、成長につながる。">
+	<title>株式会社Fig Leaves公式ホームページ｜会社紹介</title>
+	<meta name="description" content="動画/WEB制作・広告事業を主軸にメディア事業やアプリ事業に取り組むク株式会社FIG LEAVES">
 	<meta name="keywords" content="WEB制作/動画/広告事業/メディア事業/アプリ事業">
-	<meta property="og:title" content="社員インタビュー01 | プレミアムプラン">
+	<meta property="og:title" content="株式会社Fig Leaves公式ホームページ｜動画マーケティング・映像制作・動画広告・広告・システム開発">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="ここにページのURL">
-	<meta property="og:image" content="http://testdomain.x0.com/premium/images/interview1.png">
-	<meta property="og:site_name" content="プレミアムプラン">
-	<meta property="og:description" content="今日存在しない、新しい明日を創る。任される文化が、成長につながる。">
+	<meta property="og:image" content="http://fig-leaves.bz">
+	<meta property="og:site_name" content="会社紹介">
+	<meta property="og:description" content="会社紹介">
 	<meta name="twitter:card" content="summary_large_image"><!-- Twitter -->
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
@@ -27,6 +25,7 @@
 	<link rel="alternate stylesheet" href="css/color2.css" title="color2">
 	<link rel="alternate stylesheet" href="css/color3.css" title="color3">
 	<link rel="alternate stylesheet" href="css/color4.css" title="color4">
+	<link rel="stylesheet" href="css/staff.css">
 	<link rel="icon" href="images/favicon.ico">
 	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 	<script src="http://code.jquery.com/jquery-2.0.0.js"></script>
@@ -35,6 +34,57 @@
 	<script src="js/jquery.bxslider.min.js"></script>
 	<script src="js/dmss.js"></script>
 	<script src="js/custom.js"></script>
+	<script>
+		$(function(){
+			$('.page_header').each(function () {
+
+		        var $window = $(window), 
+		        	$header = $(this),
+		            $interview = $("#about"),
+					topInterview = $interview.offset().top;
+
+		            $headerClone = $header.contents().clone(),
+
+		            $headerCloneContainer = $('<div class="page_header_clone"></div>'),
+
+		        $headerCloneContainer.append($headerClone);
+
+		        $headerCloneContainer.appendTo('#first');
+
+				var sticky = false;
+		 
+					 $window.on("scroll", function () {
+					      if ($window.scrollTop() > topInterview) {
+					           if ( sticky === false ){
+					                $headerCloneContainer.slideDown();
+					                sticky = true;
+					           }
+					      } else {
+					           if ( sticky === true ){
+					                $headerCloneContainer.slideUp();
+					                sticky = false;
+					           }
+					      }
+					 });
+					 $window.trigger("scroll");
+		    });
+		});
+	</script>
+	<script>
+		$(function(){
+			jQuery('.demo_changer .demo-icon').click(function(){
+				if(jQuery('.demo_changer').hasClass("active")){
+					jQuery('.demo_changer').animate({"left":"-120px"},function(){
+					jQuery('.demo_changer').toggleClass("active");
+				});						
+				}else{
+					jQuery('.demo_changer').animate({"left":"0px"},function(){
+					jQuery('.demo_changer').toggleClass("active");
+					});			
+				} 
+			});
+		});
+	</script>
 
 
 	<!--[if lt IE 9]>
@@ -45,307 +95,205 @@
 </head>
 
 
+<body id="first">
 
-<body>
-	<div id="wrap" class="top">
-
-
-
+	<div id="wrap">
+		<div class="switcher-wrapper">
+			<div class="demo_changer">
+				<div class="demo-icon customBgColor">
+					<i class="fa fa-cog fa-spin fa-2x"></i>
+				</div>
+				<div class="form_holder">
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<div class="predefined_styles">
+								<div class="skin-theme-switcher">
+									<h4>Color</h4>
+									<a href="#" data-switchcolor="color1" class="styleswitch" style="background-color:#d81a5a;"> </a>
+									<a href="#" data-switchcolor="color2" class="styleswitch" style="background-color:#45a786;"> </a>
+									<a href="#" data-switchcolor="color3" class="styleswitch" style="background-color:#56c4cf;"> </a>
+									<a href="#" data-switchcolor="color4" class="styleswitch" style="background-color:#e99e44;"> </a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<header class="page_header">
 			<div class="gnav_inner">
-
-
 					<div class="gnav">
-
 						<div class="header_left">
-							<a href="index.html">FIG LEAVES<br>RECRUIT SITE <span>2018</span></a>
+							<a href="index.html"><img class="Logo" src="images/fig-logo-yoko.png"><br> <span></span></a>
 						</div><!-- header_left -->
-							
 						<nav class="header_right pc">
-
 							<ul id="" class="">
-
 								<li class="nav_item">
-									<a href="index.html" class="scroll">TOP<br><span>採用トップ</span></a>
+									<a href="index.html">TOP<br><span>トップ</span></a>
 								</li>
-
 								<li class="nav_item">
-									<a href="#about" class="scroll">Who We Are<br><span>会社紹介</span></a>
+									<a href="about.html">Why We Are<br><span>会社紹介</span></a>
 								</li>
-
 								<li class="nav_item">
-									<a href="#interview" class="scroll">Inrterview<br><span>インタビュー</span></a>
+									<a href="#interview">What We Do<br><span>プロダクト</span></a>
 								</li>
-
 								<li class="nav_item">
-									<a href="#detail" class="scroll">Detail<br><span>詳細情報</span></a>
+									<a href="#interview">News<br><span>ニュース</span></a>
 								</li>
-
+								<li class="nav_item">
+									<a href="#detail">Recruit<br><span>採用情報</span></a>
+								</li>
 								<li class="nav_item">
 									<a href="" class="entry arrow">
-										<p>ENTRY NOW!<br><span>マイナビからエントリー</span></p>
+										<p>Contact<br><span>お問い合わせはコチラ</span></p>
 									</a>
 								</li>
-
 							</ul>
 						</nav>
-
 						<div class="menu_btn">
-							<a class="menu_trigger" href="">
+							<a class="menu_trigger">
 								<span></span>
 								<span></span>
 								<span></span>
 							</a>
 						</div>
-
 					</div><!-- .gnav -->
-
 					<div id="overlay">
-
 						<div class="header_left">
-							<a href="">FIG LEAVES<br>RECRUIT SITE <span>2018</span></a>
+							<a href="">FIG LEAVES</a>
 						</div><!-- header_left -->
-
 						<nav id="sp_nav">
-
 							<ul id="sp_nav_lists">
-
 								<li class="sp_nav_item">
 									<a href="index.html" class="sp_nav_link">TOP
 										<span>採用トップ</span>
 									</a>
 								</li>
-
 								<li class="sp_nav_item">
 									<a href="#about" class="sp_nav_link">Who We Are
 										<span>会社紹介</span>
 									</a>
 								</li>
-
 								<li class="sp_nav_item">
 									<a href="#interview" class="sp_nav_link">Inrterview
 										<span>インタビュー</span>
 									</a>
 								</li>
-
 								<li class="sp_nav_item">
 									<a href="#detail" class="sp_nav_link">Detail
 										<span>詳細情報</span>
 									</a>
-								</li>
-								
+								</li>								
 								<li class="sp_nav_item">
 									<a href="" class="sp_nav_link">ENTRY
 										<span>エントリー</span>
 									</a>
 								</li>
-
-
 							</ul>
-
 						</nav><!-- #sp_nav -->
-
 						<div class="menu_btn">
-							<a class="menu_trigger" href="">
+							<a class="menu_trigger">
 								<span></span>
 								<span></span>
 								<span></span>
 							</a>
 						</div>
-
 					</div><!-- #overlay -->		
-
 			</div><!-- .gnav_inner -->
 		</header>
-
-
-
 		<main>
+			<section>
+	
+				<img class="aboutImg" src="images/sample.png">
 
-			<nav class="breadcrumb">
-
-			    <div class="inner">
-		            <a href="index.html">TOP</a><span> > 社員インタビュー01</span>
-		        </div>
-
-			</nav>
-
-			<article>
-
-				<div class="interview_top">
-
-					<img src="images/interview1.png" alt="" class="article_img">
-
-					<div class="interview_title">
-						<div class="inner">
-
-							<h1>今日存在しない、新しい明日を創る。任される文化が、成長につながる。</h1>
-							<h2>伊藤総一郎</h2>
-							<p>エンジニア 2013/新卒/広告事業部</p>
-
-						</div>
-					</div><!-- .interview_title -->
-					
-				</div><!-- .interview_top -->
-				
-
+				<div class="first_view_text">
+					<h1>Maximize your Individuality.</h1>
+					<h2>テクノロジーの力で、今日よりもっと良い明日を。</h2>
+				</div><!-- .first_view_text -->
+			</section><!-- #first_view -->
+			<section>
 				<div class="inner">
-				
-					<div class="interview_inner">
-
-						<h2>MISSION：なぜやるのか？</h2>
-
-						<p>このテキストはダミーテキストです。ここにはインタビュー内容が入ります。このテキストはダミーテキストです。ここにはインタビュー内容が入ります。このテキストはダミーテキストです。ここにはインタビュー内容が入ります。このテキストはダミーテキストです。ここにはインタビュー内容が入ります。</p>
-
-						<p>このテキストはダミーテキストです。ここにはインタビュー内容が入ります。このテキストはダミーテキストです。ここにはインタビュー内容が入ります。このテキストはダミーテキストです。ここにはインタビュー内容が入ります。このテキストはダミーテキストです。ここにはインタビュー内容が入ります。</p>
-
-						<p>このテキストはダミーテキストです。ここにはインタビュー内容が入ります。このテキストはダミーテキストです。ここにはインタビュー内容が入ります。このテキストはダミーテキストです。ここにはインタビュー内容が入ります。このテキストはダミーテキストです。ここにはインタビュー内容が入ります。</p>
-
-
-						<h2>BUSINESS：何をやるのか？</h2>
-
-						<p>このテキストはダミーテキストです。ここにはインタビュー内容が入ります。このテキストはダミーテキストです。ここにはインタビュー内容が入ります。このテキストはダミーテキストです。ここにはインタビュー内容が入ります。このテキストはダミーテキストです。ここにはインタビュー内容が入ります。</p>
-
-						<p>このテキストはダミーテキストです。ここにはインタビュー内容が入ります。このテキストはダミーテキストです。ここにはインタビュー内容が入ります。このテキストはダミーテキストです。ここにはインタビュー内容が入ります。このテキストはダミーテキストです。ここにはインタビュー内容が入ります。</p>
-
-						<p>このテキストはダミーテキストです。ここにはインタビュー内容が入ります。このテキストはダミーテキストです。ここにはインタビュー内容が入ります。このテキストはダミーテキストです。ここにはインタビュー内容が入ります。このテキストはダミーテキストです。ここにはインタビュー内容が入ります。</p>
-						
-					</div><!-- .interview_inner -->
-
-
-				</div><!-- .inner -->
-			</article>
-
-
-			<section id="interview">
-				<div class="inner">
-
 					<div class="heading">
-						<h2>Interview</h2>
-						<p>社員インタビュー</p>	
+						<h2>Company</h2>
+						<p>会社概要</p>	
+						<div class="underline"></div>
+						<div class="mission_inner">
+							<div class="mission_inner_content">
+								<table>
+									<tbody>
+										<th>会社名</th>
+										<td>株式会社FIG LEAVES</td>
+										<th>代表取締役</th>
+										<td>岸慶紀</td>
+										<th>連絡先</th>
+										<td>info@fig-leaves.bz<br>
+											03-4405-7715
+										</td>
+										<th>設立</th>
+										<td>2014年11月11日</td>
+										<th>事業内容</th>
+										<td>広告事業・メディア事業・映像クラウドソーシング・Webシステムの開発・社会貢献事業</td>
+										<th>所在地</th>
+										<td>東京都渋谷区桜丘町29-24秀和桜丘レジデンス502</td>
+									</tbody>
+								</table>
+							</div>
+						</div><!-- .mission_inner -->		
+					</div><!-- .heading -->		
+				</div><!-- .inner -->
+			</section>
+			
+			<section>
+				<div class="inner">
+					<div class="heading">
+						<h2>Our Value</h2>
+						<p>ミッションについて</p>	
+						<div class="underline"></div>
+						<div class="mission_inner">
+							<div class="mission_inner_content">
+								誰もが個性を最大化できる世界を作ること、これが我々のミッションです。インターネットが解放した「個」の力をより効率的にし、「やりたいこと」と「仕事」を繋げていきます。<br>
+								動画クラウドソーシングサービスでは、映像クリエイター約100名に時間や場所にとらわれず、働く機会を提供します。<br>
+								当社では今後も、人々の個の力を最大化するサービス・プロダクトを提供していきます。
+							</div>
+						</div><!-- .mission_inner -->		
+					</div><!-- .heading -->		
+				</div><!-- .inner -->
+			</section>
+
+
+			<section>
+				<div class="inner">
+					<div class="heading">
+						<h4>People</h4>
 						<div class="underline"></div>
 					</div><!-- .heading -->
-
-					<div class="list">
-
-						<ul class="voice_slider">
-
+					<div class="staff_list">
+						<ul>
 							<li>
-								<div class="list_inner">
-
-									<div class="list_top">
-										<h3>今日存在しない、新しい明日を創る。任される文化が、成長につながる。</h3>
-										<p>伊藤総一郎</p>
+								<div class="staff_list_inner">
+									<div class="staff_list_top">
+										<h5>CEO Yoshiaki Kishi</h5>		
 									</div><!-- .list_top -->
-
-									<img src="images/thumbnail1.png" alt="">
-									
-									<div class="list_bottom">
-										<p>エンジニア</p>
-										<a href="interview1.html">詳細を見る</a>
-										<div style="clear: both;"></div>
-									</div><!-- .list_bottom -->
-
+									<img src="images/kishi.png" alt="">
 								</div><!-- .list_inner -->
 							</li>
-
 							<li>
-								<div class="list_inner">
-
-									<div class="list_top">
-										<h3>３年で営業本部長に。スピード感を持って成長したい人、求む!</h3>
-										<p>米倉翔太</p>
+								<div class="staff_list_inner">
+									<div class="staff_list_top">
+										<h5>CEO Yoshiaki Kishi</h5>		
 									</div><!-- .list_top -->
-
-									<img src="images/thumbnail2.png" alt="">
-									
-									<div class="list_bottom">
-										<p>営業本部長</p>
-										<a href="interview2.html">詳細を見る</a>
-										<div style="clear: both;"></div>
-									</div><!-- .list_bottom -->
-
+									<img src="images/kishi.png" alt="">
 								</div><!-- .list_inner -->
 							</li>
-
 							<li>
-								<div class="list_inner">
-
-									<div class="list_top">
-										<h3>誰とやるかが大事。個性的なメンバーと最高の仕事を!</h3>
-										<p>斎藤りかこ</p>
+								<div class="staff_list_inner">
+									<div class="staff_list_top">
+										<h5>CEO Yoshiaki Kishi</h5>		
 									</div><!-- .list_top -->
-
-									<img src="images/thumbnail3.png" alt="">
-									
-									<div class="list_bottom">
-										<p>エンジニア</p>
-										<a href="interview3.html">詳細を見る</a>
-										<div style="clear: both;"></div>
-									</div><!-- .list_bottom -->
-
+									<img src="images/kishi.png" alt="">
 								</div><!-- .list_inner -->
 							</li>
-
-							<li>
-								<div class="list_inner">
-
-									<div class="list_top">
-										<h3>今日存在しない、新しい明日を創る。任される文化が、成長につながる。</h3>
-										<p>伊藤総一郎</p>
-									</div><!-- .list_top -->
-
-									<img src="images/thumbnail1.png" alt="">
-									
-									<div class="list_bottom">
-										<p>エンジニア</p>
-										<a href="interview1.html">詳細を見る</a>
-										<div style="clear: both;"></div>
-									</div><!-- .list_bottom -->
-
-								</div><!-- .list_inner -->
-							</li>
-
-							<li>
-								<div class="list_inner">
-
-									<div class="list_top">
-										<h3>３年で営業本部長に。スピード感を持って成長したい人、求む!</h3>
-										<p>米倉翔太</p>
-									</div><!-- .list_top -->
-
-									<img src="images/thumbnail2.png" alt="">
-									
-									<div class="list_bottom">
-										<p>営業本部長</p>
-										<a href="interview2.html">詳細を見る</a>
-										<div style="clear: both;"></div>
-									</div><!-- .list_bottom -->
-
-								</div><!-- .list_inner -->
-							</li>
-
-							<li>
-								<div class="list_inner">
-
-									<div class="list_top">
-										<h3>誰とやるかが大事。個性的なメンバーと最高の仕事を!</h3>
-										<p>斎藤りかこ</p>
-									</div><!-- .list_top -->
-
-									<img src="images/thumbnail3.png" alt="">
-									
-									<div class="list_bottom">
-										<p>エンジニア</p>
-										<a href="interview3.html">詳細を見る</a>
-										<div style="clear: both;"></div>
-									</div><!-- .list_bottom -->
-
-								</div><!-- .list_inner -->
-							</li>
-
 						</ul>
-
 					</div><!-- .list -->							
 
 				</div><!-- .inner -->
@@ -353,20 +301,16 @@
 
 			<section class="form">
 					
-				<h2>ご気軽にマイナビサイトからの<br class="sp">エントリーください。</h2>
+				<h2>広告・制作の相談は<br class="sp">こちらから</h2>
 
 				<a href="" class="scroll_link arrow">
 
 					<div class="form_text">
-						<h3>ENTRY NOW!</h3>
-						<p>マイナビからエントリー</p>
+						<h5>Contact now</h5>
+						<p>お問い合わせ</p>
 					</div>
-
 				</a>
-
 			</section><!-- .form -->
-
-
 		</main>
 
 

@@ -1,0 +1,56 @@
+.staff_list li{
+    list-style-type: none;
+    display: inline-block;
+    width: 33%;
+    padding: 0 1rem;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+.staff_list_inner{
+	background: #fff;
+	border: 2px solid #e6e6e6;
+}
+
+.staff_list_inner p{
+	font-size: 14px;
+}
+
+.staff_list_top, .list_bottom{
+	padding: .5rem;
+}
+
+.staff_list_top h5{
+	font-size: 15px;
+	font-weight: normal;
+	padding-bottom: .5rem;
+}
+
+.staff_list_inner img{
+	width: 100%;
+}
+
+.aboutImg{
+	width: 100%;
+	position: relative;
+}
+
+.first_view_text{
+	position: absolute;
+	top: 35%;
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+}
+
+.first_view_text h1{
+	font-size: 48px;
+	font-weight: normal;
+	color: white;
+}
+
+.first_view_text h2{
+	font-size: 24px;
+	font-weight: normal;
+	color: #fff;
+}
