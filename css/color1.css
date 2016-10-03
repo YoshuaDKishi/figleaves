@@ -1,0 +1,71 @@
+.header_left a span{
+    color: #d81a5a;
+}
+
+.underline{
+    border-bottom: 2px solid #d81a5a;
+}
+
+.demo_changer .demo-icon {
+    background: #d81a5a;
+}
+
+.entry{
+    background-color: #d81a5a;
+    border: 2px solid #d81a5a;
+}
+
+.entry:hover{
+    color: #d81a5a;
+}
+
+.about_title{
+    color: #d81a5a;
+}
+
+.about_btn{
+    color: #d81a5a;
+    border: 1px solid #d81a5a;
+}
+
+.about_btn:hover{
+    color: #fff;
+    background-color: #d81a5a;
+}
+
+a.about_btn:link, a.about_btn:visited{
+    color: #d81a5a;
+}
+
+a.about_btn:hover, a.about_btn:active{
+  color: #fff;
+}
+
+.list_bottom a{
+    background-color: #d81a5a;
+    border: 1px solid #d81a5a;
+}
+
+.list_bottom a:hover{
+    color: #d81a5a;
+}
+
+.form{
+    background-color: #d81a5a;
+}
+
+a.scroll_link{
+    color: #d81a5a;
+}
+
+.scroll_link:hover{
+    background-color: #d81a5a;
+}
+
+footer span{
+    color: #d81a5a;
+}
+
+.top .nav_item a.entry:hover{
+    color: #d81a5a;
+}

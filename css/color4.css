@@ -1,0 +1,246 @@
+/* General Demo Style */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+@font-face {
+    font-family: 'AnimalsNormal';
+    src: url('fonts/animals-webfont.eot');
+    src: url('fonts/animals-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/animals-webfont.woff') format('woff'),
+         url('fonts/animals-webfont.ttf') format('truetype'),
+         url('fonts/animals-webfont.svg#AnimalsNormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html { height: 100%; }
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    background: #fff;
+    font-weight: 300;
+    font-size: 15px;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: #555;
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    position: relative;
+}
+
+.container.demo-1 {
+    height: 100%;
+    position: absolute;
+}
+
+.clr {
+    clear: both;
+    padding: 0;
+    height: 0;
+    margin: 0;
+}
+
+.main {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.container > header,
+.content-wrapper {
+    /*width:80%;*/
+    /*max-width:960px;*/
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.content-wrapper p{
+    padding-top: 30px;
+    line-height: 26px;
+}
+
+.container > header h1 {
+    font-size: 34px;
+    line-height: 38px;
+    margin: 0;
+    font-weight: 700;
+    color: #333;
+    float: left;
+}
+
+.container > header h1 span {
+    display: block;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
+/* Header Style */
+.codrops-top {
+    line-height: 24px;
+    font-size: 11px;
+    background: #fff;
+    background: rgba(102,255,255,0.8);
+    text-transform: uppercase;
+    z-index: 9999;
+    position: relative;
+    font-family: Cambria, Georgia, serif;
+    box-shadow: 1px 0px 2px rgba(0,0,0,0.2);
+}
+
+.codrops-top a {
+    padding: 0px 10px;
+    letter-spacing: 1px;
+    color: #333;
+    display: inline-block;
+}
+
+.codrops-top a:hover {
+    background: rgba(255,255,255,0.6);
+}
+
+.codrops-top span.right {
+    float: right;
+}
+
+.codrops-top span.right a {
+    float: left;
+    display: block;
+}
+
+/* Demo Buttons Style */
+.codrops-demos {
+    float: right;
+    padding-top: 10px;
+}
+
+.demo-1 .codrops-demos {
+    position: absolute;
+    z-index: 2000;
+    top: 30px;
+    left: 30px;
+}
+
+.codrops-demos a {
+    display: inline-block;
+    margin: 10px;
+    color: #333;
+    font-weight: 700;
+    line-height: 30px;
+    border-bottom: 4px solid transparent;
+}
+
+.codrops-demos a:hover {
+    color: #883d59;
+    border-color: #883d59;
+}
+
+.codrops-demos a.current-demo,
+.codrops-demos a.current-demo:hover {
+    color: #aaa;
+    border-color: #aaa;
+}
+
+/* //////////////////////////////////////////////////////////////////
+[Top]
+////////////////////////////////////////////////////////////////// */
+
+
+/* Product Recommend
+------------------------------------------------------------------ */
+
+/*
+    @media (min-width: 760px) and (max-width: 979px) {
+        #carousel div.recommend{width:230px;float:left;padding-left:20px;margin-left:0;position:relative;line-height:1.8;color:#000}
+        #carousel div.recommend:last-child{padding-right:0;}
+        #carousel div.recommend figure{width:100%; float:none; position:relative; overflow: hidden}
+        #carousel div.recommend figure span{box-sizing:content-box!important;-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important}
+        #carousel div.recommend figure span.mask{box-sizing:content-box!important;-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important}
+        #carousel div.recommend figure span.mask1{box-sizing:content-box!important;-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important}
+        #carousel div.recommend figure a{display:block}
+        #carousel div.recommend .recomendDetail{width:100%; float:none; padding-left: 0;}
+        #carousel div.recommend .recomendDetail .recomendTxt{display:block;}
+        #carousel div.recommend .recomendDetail .recomendName{font-family: 'Hiragino Mincho ProN', serif; font-weight:bold;}
+    }
+    @media (max-width: 759px) {
+        #carousel div.recommend{width:230px;float:left;margin-left:0;position:relative;line-height:1.8;padding-left:20px;color:#000}
+        #carousel div.recommend:last-child{padding-right:0;}
+        #carousel div.recommend figure{ max-width:100px; float:left; position:relative; overflow: hidden}
+        #carousel div.recommend figure span{box-sizing:content-box!important;-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important}
+        #carousel div.recommend figure span.mask{box-sizing:content-box!important;-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important}
+        #carousel div.recommend figure span.mask1{box-sizing:content-box!important;-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important}
+        #carousel div.recommend figure a{display:block}
+        #carousel div.recommend .recomendDetail{width:100px; float:right;}
+        #carousel div.recommend .recomendDetail .recomendName{font-size:10px;font-size:1.0rem;}
+        #carousel div.recommend .recomendDetail .recomendShop{margin:5px 0 0 0;}zzzz
+        #carousel div.recommend .recomendDetail .recomendTxt{display:none;}
+        #carousel div.recommend .recomendDetail .recomendName{font-family: 'Hiragino Mincho ProN', serif; font-weight:bold;}
+    }
+*/
+
+/*jScrollPane Plugin */
+.jspScrollable{ width: 100%!important; position:relative;}
+.jspContainer{overflow:hidden;position:relative;width:100%!important;}
+.jspPane{position:absolute;width:100%!important;}
+.jspVerticalBar{position:absolute;top:0;right:0;width:5px;height:100%;background:red}
+.jspHorizontalBar{position:absolute;bottom:0;left:0;width:100%;height:16px;background:red}
+.jspVerticalBar *,.jspHorizontalBar *{margin:0;padding:0}
+.jspCap{display:none}
+.jspHorizontalBar .jspCap{float:left}
+.jspTrack{background:#FFFFFF;position:relative}
+.jspDrag{background:#A59471;position:relative;top:0;left:0;cursor:pointer}
+.jspHorizontalBar .jspTrack,.jspHorizontalBar .jspDrag{float:left;height:100%}
+.jspArrow{background:#877965;text-indent:-20000px;display:block;cursor:pointer}
+.jspArrow.jspDisabled{cursor:default;background:#877965}
+.jspVerticalBar .jspArrow{height:10px}
+.jspHorizontalBar .jspArrow{width:10px;float:left;height:100%}
+.jspVerticalBar .jspArrow:focus{outline:none}
+.jspCorner{background:#eeeef4;float:left;height:100%}
+* html .jspCorner{margin:0 -3px 0 0}
+
+.caroufredsel_wrapper{
+    margin: 0px !important;
+    height: 146px!important;
+
+}
+#wpstats{
+display:none;
+}
+#recommendCont{max-width: 1300px;width:100%;position:relative;overflow:hidden;background-position:top left;margin:0 auto;padding:0px 0 0}
+#recommendCont h2.sectionTitle{background-position: 0 0;}
+#recommendSlide{position:relative;overflow:hidden;padding-bottom: 14px;}
+#carousel{width:auto;max-height:250px;display:block;overflow:hidden;margin:30px 0 0;padding:0}
+#carousel div.recommend{width:230px;float:left;padding-left:20px;margin-left:0;position:relative;color:#000}
+/* Figure */
+#carousel div.recommend figure{width:100%; float:none; position:relative; overflow: hidden}
+#carousel div.recommend figure span{display:block;overflow:hidden;position:absolute;top:0;left:0;box-sizing:content-box!important;-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important}
+#carousel div.recommend figure span.mask{cursor:pointer;z-index:999;box-sizing:content-box!important;-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important}
+#carousel div.recommend figure span.mask1{border:10px;left:-10px;top:-10px;z-index:888;box-sizing:content-box!important;-webkit-box-sizing:content-box!important;-moz-box-sizing:content-box!important;border-color:rgba(255,44,52,0.6);border-style:solid;display:none}
+#carousel div.recommend figure a{display:block}
+/* detail */
+#carousel div.recommend .recomendDetail{width:100%; float:none;  padding-left: 0;}
+#carousel div.recommend .recomendDetail .recomendName{padding-left:0;height:auto;font-size:9px;font-size:0.9rem;font-weight:700;line-height:1;background-repeat:no-repeat;background-position:0 0;margin: 10px 0 0;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;-webkit-text-overflow: ellipsis;-o-text-overflow: ellipsis;}
+#carousel div.recommend .recomendDetail .recomendShop{font-size:9px;font-size:0.9rem;margin: 8px 0 0}
+#carousel div.recommend .recomendDetail .recomendTxt{font-size:7px;font-size:0.7rem;line-height: 1.3;white-space: nowrap;margin: 5px 0 0;overflow: hidden;text-overflow: ellipsis;-webkit-text-overflow: ellipsis;-o-text-overflow: ellipsis;}

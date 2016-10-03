@@ -1,0 +1,72 @@
+.header_left a span{
+    color: #56c4cf;
+}
+
+.underline{
+    border-bottom: 2px solid #56c4cf;
+}
+
+.demo_changer .demo-icon {
+    background: #56c4cf;
+}
+
+
+.entry{
+    background-color: #56c4cf;
+    border: 2px solid #56c4cf;
+}
+
+.entry:hover{
+    color: #56c4cf;
+}
+
+.about_title{
+    color: #56c4cf;
+}
+
+.about_btn{
+    color: #56c4cf;
+    border: 1px solid #56c4cf;
+}
+
+.about_btn:hover{
+    color: #fff;
+    background-color: #56c4cf;
+}
+
+a.about_btn:link, a.about_btn:visited{
+    color: #56c4cf;
+}
+
+a.about_btn:hover, a.about_btn:active{
+  color: #fff;
+}
+
+.list_bottom a{
+    background-color: #56c4cf;
+    border: 1px solid #56c4cf;
+}
+
+.list_bottom a:hover{
+    color: #56c4cf;
+}
+
+.form{
+    background-color: #56c4cf;
+}
+
+a.scroll_link{
+    color: #56c4cf;
+}
+
+.scroll_link:hover{
+    background-color: #56c4cf;
+}
+
+footer span{
+    color: #56c4cf;
+}
+
+.top .nav_item a.entry:hover{
+    color: #56c4cf;
+}

@@ -1,0 +1,71 @@
+.header_left a span{
+    color: #45a786;
+}
+
+.underline{
+    border-bottom: 2px solid #45a786;
+}
+
+.demo_changer .demo-icon {
+    background: #45a786;
+}
+
+.entry{
+    background-color: #45a786;
+    border: 2px solid #45a786;
+}
+#45a786
+.entry:hover{
+    color: #45a786;
+}
+
+.about_title{
+    color: #45a786;
+}
+
+.about_btn{
+    color: #45a786;
+    border: 1px solid #45a786;
+}
+
+.about_btn:hover{
+    color: #fff;
+    background-color: #45a786;
+}
+
+a.about_btn:link, a.about_btn:visited{
+    color: #45a786;
+}
+
+a.about_btn:hover, a.about_btn:active{
+    color: #fff;
+}
+
+.list_bottom a{
+    background-color: #45a786;
+    border: 1px solid #45a786;
+}
+
+.list_bottom a:hover{
+    color: #45a786;
+}
+
+.form{
+    background-color: #45a786;
+}
+
+a.scroll_link{
+    color: #45a786;
+}
+
+.scroll_link:hover{
+    background-color: #45a786;
+}
+
+footer span{
+    color: #45a786;
+}
+
+.top .nav_item a.entry:hover{
+    color: #45a786;
+}
