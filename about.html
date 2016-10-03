@@ -7,7 +7,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<title>株式会社Fig Leaves公式ホームページ｜会社紹介</title>
+	<title>株式会社Fig Leaves公式ホームページ(仮サイト)	｜会社紹介</title>
 	<meta name="description" content="動画/WEB制作・広告事業を主軸にメディア事業やアプリ事業に取り組むク株式会社FIG LEAVES">
 	<meta name="keywords" content="WEB制作/動画/広告事業/メディア事業/アプリ事業">
 	<meta property="og:title" content="株式会社Fig Leaves公式ホームページ｜動画マーケティング・映像制作・動画広告・広告・システム開発">
@@ -32,44 +32,10 @@
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
 	<script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
 	<script src="js/jquery.bxslider.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key={AIzaSyCeKcHLM1DRKvipVt9hR0d7yEdqwU3Qjsc}"></script>
 	<script src="js/dmss.js"></script>
 	<script src="js/custom.js"></script>
-	<script>
-		$(function(){
-			$('.page_header').each(function () {
-
-		        var $window = $(window), 
-		        	$header = $(this),
-		            $interview = $("#about"),
-					topInterview = $interview.offset().top;
-
-		            $headerClone = $header.contents().clone(),
-
-		            $headerCloneContainer = $('<div class="page_header_clone"></div>'),
-
-		        $headerCloneContainer.append($headerClone);
-
-		        $headerCloneContainer.appendTo('#first');
-
-				var sticky = false;
-		 
-					 $window.on("scroll", function () {
-					      if ($window.scrollTop() > topInterview) {
-					           if ( sticky === false ){
-					                $headerCloneContainer.slideDown();
-					                sticky = true;
-					           }
-					      } else {
-					           if ( sticky === true ){
-					                $headerCloneContainer.slideUp();
-					                sticky = false;
-					           }
-					      }
-					 });
-					 $window.trigger("scroll");
-		    });
-		});
-	</script>
+	
 	<script>
 		$(function(){
 			jQuery('.demo_changer .demo-icon').click(function(){
@@ -95,7 +61,7 @@
 </head>
 
 
-<body id="first">
+<body onload="initialize();">
 
 	<div id="wrap">
 		<div class="switcher-wrapper">
@@ -111,8 +77,8 @@
 									<h4>Color</h4>
 									<a href="#" data-switchcolor="color1" class="styleswitch" style="background-color:#d81a5a;"> </a>
 									<a href="#" data-switchcolor="color2" class="styleswitch" style="background-color:#45a786;"> </a>
-									<a href="#" data-switchcolor="color3" class="styleswitch" style="background-color:#56c4cf;"> </a>
-									<a href="#" data-switchcolor="color4" class="styleswitch" style="background-color:#e99e44;"> </a>
+									<a href="#" data-switchcolor="color3" class="styleswitch" style="background-color:#ffd700;"> </a>
+									<a href="#" data-switchcolor="color4" class="styleswitch" style="background-color:#56c4cf;"> </a>
 								</div>
 							</div>
 						</div>
@@ -215,34 +181,138 @@
 				<div class="inner">
 					<div class="heading">
 						<h2>Company</h2>
-						<p>会社概要</p>	
+						<p>会社概要</p>
+
 						<div class="underline"></div>
-						<div class="mission_inner">
-							<div class="mission_inner_content">
+					</div><!-- .heading -->	
+						<div class="about_inner">
+							<div class="about_inner_content">
 								<table>
 									<tbody>
-										<th>会社名</th>
-										<td>株式会社FIG LEAVES</td>
-										<th>代表取締役</th>
-										<td>岸慶紀</td>
-										<th>連絡先</th>
-										<td>info@fig-leaves.bz<br>
+										<tr>
+											<th class="form">会社名</th>
+											<td>株式会社FIG LEAVES</td>
+										</tr>
+										<tr >
+											<th class="form">代表取締役</th>
+											<td>岸慶紀</td>
+										</tr>
+										<tr>
+											<th class="form">連絡先</th>
+											<td>info@fig-leaves.bz<br>
 											03-4405-7715
-										</td>
-										<th>設立</th>
-										<td>2014年11月11日</td>
-										<th>事業内容</th>
-										<td>広告事業・メディア事業・映像クラウドソーシング・Webシステムの開発・社会貢献事業</td>
-										<th>所在地</th>
+											</td>
+										</tr>
+										<tr>
+											<th class="form">設立</th>
+											<td>2014年11月11日</td>
+										</tr>
+										<tr>
+											<th class="form">事業内容</th>
+											<td>広告事業・メディア事業・映像クラウドソーシング・Webシステムの開発・社会貢献事業</td>
+										</tr>
+										<tr>
+										<th class="form">所在地</th>
 										<td>東京都渋谷区桜丘町29-24秀和桜丘レジデンス502</td>
+										</tr>
 									</tbody>
 								</table>
 							</div>
-						</div><!-- .mission_inner -->		
-					</div><!-- .heading -->		
+						</div><!-- .mission_inner -->
+						<div id="map_canvas" style="width:100%;height:500px;"></div>
+                        <script type="text/javascript">
+
+
+
+
+							var map, marker, infowindow;
+							/* ページ読み込み時に地図を初期化 */
+							$(function(){
+							initialize();
+							});
+							/* 地図の初期化 */
+							function initialize() {
+							/* 緯度・経度 */
+							var japan=new google.maps.LatLng(35.673161, 139.774483);
+							/* 地図のオプション設定 */
+							var myOptions={
+							/*初期のズーム レベル */
+							zoom: 18,
+							/*スクロールイベントなし */
+							scrollwheel:false,
+							/* 地図の中心点 */
+
+							center: new google.maps.LatLng(31.301620, -157.822659),
+							mapTypeControlOptions: { mapTypeIds: ['sample', google.maps.MapTypeId.ROADMAP] }};
+							/* 地図タイプ */
+							mapTypeId: google.maps.MapTypeId.ROADMAP
+
+							/* 地図オブジェクト */
+							map=new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+							
+							var marker1=new google.maps.Marker({
+							position: japan,
+							map: map,
+							title:"Japan, Branch"
+							});
+							
+							var styleOptions =  [
+								{
+								"featureType": "road",
+								"stylers": [
+								{ "hue": "#046fb6" },
+								{ "saturation": -45 },
+								{ "gamma": 1.53 }
+								]
+								},{
+								"featureType": "landscape",
+								"stylers": [
+								{ "hue": "#046fb6" }
+								]
+								},{
+								"stylers": [
+								 { "visibility": "simplified" }
+								]
+								}
+								];
+							var styledMapOptions = { name: 'FIG LEAVES' }
+							var sampleType = new google.maps.StyledMapType(styleOptions, styledMapOptions);
+							map.mapTypes.set('sample', sampleType);
+							map.setMapTypeId('sample');
+
+
+								google.maps.event.addDomListener(window, 'load', initialize);
+							/* マーカーがクリックされた時 */
+							google.maps.event.addListener(marker1, 'click', function() {
+							showInfoWindow(this);
+							});
+
+							/* 情報ウィンドウ表示 */
+							function showInfoWindow(obj){
+							/* 既に開かれていたら閉じる */
+							if(infowindow) infowindow.close();
+							infowindow=new google.maps.InfoWindow({
+								/* クリックしたマーカーのタイトルと緯度・経度を情報ウィンドウに表示 */
+								content:obj.getTitle()
+							});
+							infowindow.open(map,obj);
+
+
+							}
+							var styledMapOptions = { name: 'FIG LEAVES' }
+							var sampleType = new google.maps.StyledMapType(styleOptions, styledMapOptions);
+							map.mapTypes.set('sample', sampleType);
+							map.setMapTypeId('sample');
+
+							}
+						</script>
+
+                            </div>
+                        </div>
+                    </div>		
+						
 				</div><!-- .inner -->
 			</section>
-			
 			<section>
 				<div class="inner">
 					<div class="heading">
@@ -269,9 +339,9 @@
 					</div><!-- .heading -->
 					<div class="staff_list">
 						<ul>
-							<li>
+							<li >
 								<div class="staff_list_inner">
-									<div class="staff_list_top">
+									<div class="staff_list_top form">
 										<h5>CEO Yoshiaki Kishi</h5>		
 									</div><!-- .list_top -->
 									<img src="images/kishi.png" alt="">
@@ -279,18 +349,18 @@
 							</li>
 							<li>
 								<div class="staff_list_inner">
-									<div class="staff_list_top">
-										<h5>CEO Yoshiaki Kishi</h5>		
+									<div class="staff_list_top form">
+										<h5>Engineer Ito</h5>		
 									</div><!-- .list_top -->
-									<img src="images/kishi.png" alt="">
+									<img src="images/ito.png" alt="">
 								</div><!-- .list_inner -->
 							</li>
 							<li>
 								<div class="staff_list_inner">
-									<div class="staff_list_top">
-										<h5>CEO Yoshiaki Kishi</h5>		
+									<div class="staff_list_top form">
+										<h5>Marketer Ricaco</h5>		
 									</div><!-- .list_top -->
-									<img src="images/kishi.png" alt="">
+									<img src="images/ricaco.png" alt="">
 								</div><!-- .list_inner -->
 							</li>
 						</ul>

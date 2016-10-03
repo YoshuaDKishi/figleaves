@@ -9,7 +9,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<title>株式会社Fig Leaves公式ホームページ｜動画マーケティング・映像制作・動画広告・広告・システム開発</title>
+	<title>株式会社Fig Leaves公式ホームページ(仮サイト)｜動画マーケティング・映像制作・動画広告・広告・システム開発</title>
 	<meta name="description" content="動画/WEB制作・広告事業を主軸にメディア事業やアプリ事業に取り組むク株式会社FIG LEAVES">
 	<meta name="keywords" content="WEB制作/動画/広告事業/メディア事業/アプリ事業">
 	<meta property="og:title" content="株式会社Fig Leaves公式ホームページ｜動画マーケティング・映像制作・動画広告・広告・システム開発">
@@ -35,42 +35,7 @@
 	<script src="js/jquery.bxslider.min.js"></script>
 	<script src="js/dmss.js"></script>
 	<script src="js/custom.js"></script>
-	<script>
-		$(function(){
-			$('.page_header').each(function () {
-
-		        var $window = $(window), 
-		        	$header = $(this),
-		            $interview = $("#about"),
-					topInterview = $interview.offset().top;
-
-		            $headerClone = $header.contents().clone(),
-
-		            $headerCloneContainer = $('<div class="page_header_clone"></div>'),
-
-		        $headerCloneContainer.append($headerClone);
-
-		        $headerCloneContainer.appendTo('#first');
-
-				var sticky = false;
-		 
-					 $window.on("scroll", function () {
-					      if ($window.scrollTop() > topInterview) {
-					           if ( sticky === false ){
-					                $headerCloneContainer.slideDown();
-					                sticky = true;
-					           }
-					      } else {
-					           if ( sticky === true ){
-					                $headerCloneContainer.slideUp();
-					                sticky = false;
-					           }
-					      }
-					 });
-					 $window.trigger("scroll");
-		    });
-		});
-	</script>
+	
 	<script>
 		$(function(){
 			jQuery('.demo_changer .demo-icon').click(function(){
@@ -115,8 +80,8 @@
 									<h4>Color</h4>
 									<a href="#" data-switchcolor="color1" class="styleswitch" style="background-color:#d81a5a;"> </a>
 									<a href="#" data-switchcolor="color2" class="styleswitch" style="background-color:#45a786;"> </a>
-									<a href="#" data-switchcolor="color3" class="styleswitch" style="background-color:#56c4cf;"> </a>
-									<a href="#" data-switchcolor="color4" class="styleswitch" style="background-color:#e99e44;"> </a>
+									<a href="#" data-switchcolor="color3" class="styleswitch" style="background-color:#ffd700;"> </a>
+									<a href="#" data-switchcolor="color4" class="styleswitch" style="background-color:#56c4cf;"> </a>
 								</div>
 							</div>
 						</div>
@@ -236,8 +201,8 @@
 							<p>弊社のテクノロジーの強みとアップライトのエンタメの強みを生かし、業務提携いたしました。</p>
 						</div>
 						<div class="about_inner_content">
-							<h3><span>2016/10/11</span></h3>
-							<p></p>
+							<h3><span>2016/10/11</span>　企業とNPOのマッチングプラットフォームTASUKIをローンチいたしました。</h3>
+							<p>企業の社会貢献活動の最大化とNPO経営支援サービスとして、TASUKIをリリースしました。</p>
 						</div>
 						<div class="about_inner_content">
 							<h3><span>2015/01/16</span>　株式会社エフプラットと共同事業、<a href="http://www.skillots.com/">Skillots</a> を開始しました。</h3>
@@ -256,8 +221,8 @@
 						<div class="mission_inner">
 							<div class="mission_inner_content">
 								誰もが個性を最大化できる世界を作ること、これが我々のミッションです。インターネットが解放した「個」の力をより効率的にし、「やりたいこと」と「仕事」を繋げていきます。<br>
-								動画クラウドソーシングサービスでは、映像クリエイター約100名に時間や場所にとらわれず、働く機会を提供します。<br>
-								当社では今後も、人々の個の力を最大化するサービス・プロダクトを提供していきます。
+								弊社の動画クラウドソーシングサービスでは、映像クリエイター約100名に時間や場所にとらわれず、働く機会を提供し社会と市場の効率化を図っています。<br>
+								当社は今後も、人々の個の力を最大化するサービス・プロダクトを提供し続けます。
 							</div>
 						</div><!-- .mission_inner -->		
 					</div><!-- .heading -->		
@@ -341,9 +306,6 @@
 				</a>
 			</section><!-- .form -->
 		</main>
-
-
-
 		<footer>
 			<div id="f_inner">
 				<small>Copyright &copy; 2015 <span class="blue">Fig Leaves, Inc.</span> All Rights Reserved.</small>
