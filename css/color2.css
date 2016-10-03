@@ -50,6 +50,10 @@ a.about_btn:hover, a.about_btn:active{
     color: #45a786;
 }
 
+h3 span{
+    color: #45a786;
+}
+
 .form{
     background-color: #45a786;
 }

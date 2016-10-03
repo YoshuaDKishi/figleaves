@@ -58,6 +58,10 @@ a.scroll_link{
     color: #d81a5a;
 }
 
+h3 span{
+    color: #d81a5a;
+}
+
 .scroll_link:hover{
     background-color: #d81a5a;
 }
