@@ -1,0 +1,30 @@
+.staff_list li{
+    list-style-type: none;
+    display: inline-block;
+    width: 33%;
+    padding: 0 1rem;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+.staff_list_inner{
+	background: #fff;
+	border: 2px solid #e6e6e6;
+	position: relative;
+}
+
+.product_inner{
+	 background: #fff;
+	border: 2px solid #e6e6e6;
+	position: relative;
+}
+
+
+.product_inner_content{
+	list-style-type: none;
+    display: inline-block;
+    width: 33%;
+    padding: 0 1rem;
+    vertical-align: top;
+    box-sizing: border-box;
+}
